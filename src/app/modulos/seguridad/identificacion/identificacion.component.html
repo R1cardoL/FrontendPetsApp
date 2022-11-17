@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="container section">
+        <div class="row">
+          <h2 id="contacto">Bienvenido</h2>
+           <form class="col s12" [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
+                <div class="row card panel">
+                    <div class="input-field col s12">
+                        <input formControlName="usuario" type="text" placeholder="" id="correo" class="validate" required>
+                        <label for="correo">Correo:</label>
+                    </div>
+      
+                    <div class="input-field col s12">
+                        <input formControlName="clave" type="password" placeholder="" id="contraseña" class="validate" required>
+                        <label for="contraseña">Contraseña:</label>
+                    </div>
+                    
+                    <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-ligth" type="submit">Enviar</button>
+                </div>
+                <div class= "input-link">
+                    
+                </div>
+                <div class= "input-link">
+                    <a href="recuperar-clave" class="gradient-text">¿Has olvidado tu contraseña?</a>
+                    <br>
+                </div>
+            </form>
+        </div>
+        </div>
+      </div>
+    

@@ -1,0 +1,33 @@
+<nav>
+    <div class="nav-wrapper #00bcd4 cyan">
+      <a routerLink="/inicio" class="brand-logo">Logo</a>
+      <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="activeSession"><a routerLink="/administracion/usuario/crear-usuario/crear-usuario.html">Usuario</a></li>
+        <li *ngIf="activeSession"><a routerLink="/administracion/mascota">Mascota</a></li>
+        <li *ngIf="activeSession"><a routerLink="/administracion/plan">Plan</a></li>
+        <li *ngIf="activeSession"><a routerLink="/administracion/producto-servicio">Producto-Servicio</a></li>
+        <li *ngIf="activeSession"><a routerLink="/administracion/prospecto">Prospecto</a></li>
+        <li *ngIf="activeSession"><a routerLink="/administracion/sucursal">Sucursal</a></li>
+        <li *ngIf="activeSession"><a routerLink="/seguridad/cambio-clave">Cambio de clave</a></li>
+        <li *ngIf="activeSession"><a routerLink="/seguridad/recuperar-clave">Olvido la clave</a></li>
+        <li *ngIf="!activeSession"><a routerLink="administracion/editar-mascota">Mascota Status</a></li>
+        <li *ngIf="!activeSession"><a routerLink="administracion/crear-mascota">Registrar Mascota</a></li>
+        <li *ngIf="!activeSession"><a routerLink="administracion/crear-usuario">Registrese</a></li>
+        <li *ngIf="!activeSession"><a routerLink="administracion/crear-usuario">Crear Usuario</a></li>
+        <li *ngIf="!activeSession"><a routerLink="seguridad/identificar">Iniciar sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <ul class="sidenav" id="mobile-demo">
+    <li><a routerLink="/administracion/usuario">Usuario</a></li>
+    <li><a routerLink="/administracion/mascota">Mascota</a></li>
+    <li><a routerLink="/administracion/plan">Plan</a></li>
+    <li><a routerLink="/administracion/producto-servicio">Producto-Servicio</a></li>
+    <li><a routerLink="/administracion/prospecto">Prospecto</a></li>
+    <li><a routerLink="/administracion/sucursal">Sucursal</a></li>
+    <li><a routerLink="/seguridad/cambioClave">Cambio de clave</a></li>
+    <li><a routerLink="seguridad/identificar">Iniciar sesión</a></li>
+    
+  </ul>
