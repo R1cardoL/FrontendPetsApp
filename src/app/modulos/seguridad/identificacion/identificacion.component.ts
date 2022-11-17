@@ -28,6 +28,7 @@ fgValidador: FormGroup = this.fb.group({
     this.servicioSeguridad.identificar(usuario, claveCifrada).subscribe((datos: any) => {
       //OK
       alert("Datos Correctos")
+      alert("Datos OK")
     }, (error: any) =>  {
       //KO
       alert("Datos Inválidos")
