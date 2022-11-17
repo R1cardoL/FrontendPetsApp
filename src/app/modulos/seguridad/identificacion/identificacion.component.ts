@@ -12,7 +12,7 @@ export class IdentificacionComponent implements OnInit {
 
 fgValidador: FormGroup = this.fb.group({
   'usuario': ['', [Validators.required, Validators.email]],
-  'clave': ['', [Validators.required]],
+  'clave': ['', [Validators.required]], 
 })
 
   constructor(private fb: FormBuilder,
@@ -25,10 +25,10 @@ fgValidador: FormGroup = this.fb.group({
     let usuario = this.fgValidador.controls["usuario"].value;
     let clave = this.fgValidador.controls["clave"].value;
     let claveCifrada = cryptoJS.MD5(clave).toString();
-    this.servicioSeguridad.identificar(usuario, claveCifrada).subscribe((datos: any) => {
+    this.servicioSeguridad.identificar(usuario, claveCifrada).subscribe((datos:any) => {
       //OK
       alert("Datos Correctos")
-      alert("Datos OK")
+      
     }, (error: any) =>  {
       //KO
       alert("Datos Inválidos")

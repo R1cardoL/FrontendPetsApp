@@ -9,11 +9,11 @@ import { ModeloIdentificar } from '../modelos/identificar.modelo';
 export class SeguridadService {
   
   url = 'http://localhost:3000';
-  constructor(private http: HttpClient) { 3
+  constructor(private http: HttpClient) { 
   }
 
   identificar(usuario: string, clave: string): Observable<ModeloIdentificar>{
-    return this.http.post<ModeloIdentificar>(`${this.url} localhost:3000/identificarUsuario`, {
+    return this.http.post<ModeloIdentificar>(`${this.url}/identificarUsuario`, {
      usuario: usuario,
      clave: clave 
     },{
