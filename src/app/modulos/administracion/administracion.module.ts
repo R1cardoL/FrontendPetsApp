@@ -26,6 +26,7 @@ import { CrearProspectoComponent } from './prospecto/crear-prospecto/crear-prosp
 import { EditarProspectoComponent } from './prospecto/editar-prospecto/editar-prospecto.component';
 import { EliminarProspectoComponent } from './prospecto/eliminar-prospecto/eliminar-prospecto.component';
 import { BuscarProspectoComponent } from './prospecto/buscar-prospecto/buscar-prospecto.component';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -57,7 +58,9 @@ import { BuscarProspectoComponent } from './prospecto/buscar-prospecto/buscar-pr
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

@@ -1,1 +1,46 @@
-<p>buscar-producto-servicio works!</p>
+<div class="row">
+  <h2 id="contacto">Productos y Servicios Disponibles</h2>
+    <article class="col s6 offset-s3">
+      <a routerLink="/administracion/crear-producto" class="btn">Nuevo Producto-Servicio</a>
+        <table class="table responsive">
+          <thead>
+            <tr>
+              <th>
+                Tipo
+              </th>
+              <th>
+                Nombre
+              </th>
+              <th>
+                Descripción
+              </th>
+              <th>
+                Precio
+              </th>
+              <th>
+                Editar
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of listadoRegistros">
+              <td>
+                  {{p.tipo}}
+              </td>
+              <td>
+                  {{p.nombre}}
+              </td>
+              <td>
+                  {{p.descripcion}}
+              </td>
+              <td>
+                  {{p.precio}}
+              </td>
+              <td>
+                  <a routerLink="/administracion/editar-producto/{{p.id}}" class="btn">Editar Producto-Servicio</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+</div>
