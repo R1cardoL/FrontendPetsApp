@@ -11,12 +11,12 @@
         <li *ngIf="seInicioSesion"><a routerLink="/administracion/sucursal">Sucursal</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambio-clave">Cambio de clave</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/recuperar-clave">Olvido la clave</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="administracion/editar-mascota">Mascota Status</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="administracion/crear-mascota">Registrar Mascota</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="administracion/crear-usuario">Registrese</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="administracion/crear-usuario">Crear Usuario</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/editar-mascota">Mascota Status</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/crear-mascota">Registrar Mascota</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/crear-usuario">Registrese</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="administracion/crear-usuario">Crear Usuario</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="seguridad/cerrar-sesion">Cerrar sesión</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="seguridad/identificar">Iniciar sesión</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="seguridad/identificar">Iniciar sesión</a></li>
       </ul>
     </div>
   </nav>
