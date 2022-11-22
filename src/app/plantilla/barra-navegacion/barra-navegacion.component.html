@@ -4,7 +4,7 @@
       <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li *ngIf="!seInicioSesion"><a routerLink="/administracion/usuario/crear-usuario/crear-usuario.html">Usuario</a></li>
-        <li *ngIf="!seInicioSesion"><a routerLink="/administracion/mascota">Mascota</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/administracion/listar-mascotas">Mascota</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/administracion/plan">Plan</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/administracion/listar-productos">Producto-Servicio</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/administracion/prospecto">Prospecto</a></li>
@@ -23,7 +23,7 @@
   
   <ul class="sidenav" id="mobile-demo">
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/usuario/crear-usuario/crear-usuario.html">Usuario</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/mascota">Mascota</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">Mascota</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/plan">Plan</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-productos">Producto-Servicio</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/prospecto">Prospecto</a></li>

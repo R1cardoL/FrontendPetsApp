@@ -1,48 +1,35 @@
+<div class="row">
+  <h2 class="center-align">Registrar Mascota</h2>
+  <article class="col s6 offset-s3">
+    <form [formGroup]="fgValidador" (ngSubmit) = "GuardarMascota()" method="post" action="formulario-contact.php">
+      <div class="row card panel">
+      <div class="input-field" >
+        <label for="nombre">Nombre</label>
+        <input formControlName="nombre" type="text" name="nombre" required>
+      </div>
+      <div class="input-field" >
+        <label for="foto">Foto</label>
+        <input formControlName="foto" type="text" name="foto" required>
+      </div>
+      <div class="input-field" >
+        <label for="especie">Especie</label>
+        <input formControlName="especie" type="text" name="especie" required>
+      </div>
+      <div class="input-field" >
+        <label for="comentario">Comentario</label>
+        <input formControlName="comentario" type="text" name="comentario" required>
+      </div>
+      <div class="input-field">
+        <label for="estado"></label>
+        <input formControlName="estado" type="hidden" name="estado" required >
+      </div>
+      <p class="center-align">
+        <button [disabled]="!fgValidador.valid" class="waves-effect waves-ligth btn" type="submit"><i 
+          class='material-icons right'>send</i>Registrar</button>
+        </p>
+      </div>
+    </form>
+  </article>
+</div>
 
-<body>
-    <div class="container">
-        <div class="section__container">
-          <div class="row" id="formback" >
-            <h2 id="contacto">Registro Mascota</h2>
-             <form  class="col s12">
-                  <div  class="row card panel">
-                      <div class="input-field col s6">
-                          <input type="text" placeholder="" id="nombre" class="validate" required>
-                          <label for="nombre">Nombre:</label>
-                      </div>
-        
-                      <div class="input-field col s6">
-                          <input type="text" placeholder="" id="especie" class="validate" required>
-                          <label for="especie">Especie:</label>
-                      </div>
-                      <div class="input-field col s6">
-                          <input type="email" placeholder="" id="detalles" class="validate" required>
-                          <label for="detalles">Detalles:</label>
-                      </div>
-                    <div>
-                      <button type="button">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3bHMEfjOiDe8bqUNBy0YxOuShjjpNeoIy3Q&usqp=CAU" 
-                            width="50px"
-                            height="80%"
-                        alt="">
-                        <label>Subir Foto</label>
-                      </button>
-                    </div>
-                    <div>
-                        <p>
-                          <label>Estado
-                            <input class="with-gap" name="group3" type="radio" checked />
-                            <span>PENDIENTE</span>
-                          </label>
-                        </p>
-                      </div>
-                    <div>
-                        <input type="submit" class="form__submit" value="Registrar">
-                    </div>
-                  </div>
-              </form>
-          </div>
-        </div>
-        </div>
-</body>
 
