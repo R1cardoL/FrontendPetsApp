@@ -5,6 +5,7 @@ import { EditarMascotaComponent } from './mascota/editar-mascota/editar-mascota.
 import { BuscarProductoServicioComponent } from './producto-servicio/buscar-producto-servicio/buscar-producto-servicio.component';
 import { CrearProductoServicioComponent } from './producto-servicio/crear-producto-servicio/crear-producto-servicio.component';
 import { EditarProductoServicioComponent } from './producto-servicio/editar-producto-servicio/editar-producto-servicio.component';
+import { EliminarProductoServicioComponent } from './producto-servicio/eliminar-producto-servicio/eliminar-producto-servicio.component';
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
 import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
 
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'editar-producto/:id',
     component: EditarProductoServicioComponent
+  },
+  {
+    path: 'eliminar-producto/:id',
+    component: EliminarProductoServicioComponent
   },
   {
     path: 'crear-mascota',
