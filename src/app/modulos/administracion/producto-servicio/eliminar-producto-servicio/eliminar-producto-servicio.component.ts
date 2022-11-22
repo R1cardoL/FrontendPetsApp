@@ -44,7 +44,7 @@ export class EliminarProductoServicioComponent implements OnInit {
 
   EliminarProductoServicio(){
     this.servicioProducto.EliminarProducto(this.id).subscribe((datos: any) => {
-      alert ("¿Está segurod que desea eliminar el producto o servicio?");
+      alert ("¿Está seguro que desea eliminar el producto o servicio?");
       alert ("Producto o Servicio eliminado correctamente");
       this.router.navigate(["/administracion/listar-productos"]);
     }, (error: any) => {
