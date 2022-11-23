@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CrearMascotaComponent } from './mascota/crear-mascota/crear-mascota.component';
 import { EditarMascotaComponent } from './mascota/editar-mascota/editar-mascota.component';
+import { BuscarPlanComponent } from './plan/buscar-plan/buscar-plan.component';
+import { CrearPlanComponent } from './plan/crear-plan/crear-plan.component';
+import { EditarPlanComponent } from './plan/editar-plan/editar-plan.component';
+import { EliminarPlanComponent } from './plan/eliminar-plan/eliminar-plan.component';
 import { BuscarProductoServicioComponent } from './producto-servicio/buscar-producto-servicio/buscar-producto-servicio.component';
 import { CrearProductoServicioComponent } from './producto-servicio/crear-producto-servicio/crear-producto-servicio.component';
 import { EditarProductoServicioComponent } from './producto-servicio/editar-producto-servicio/editar-producto-servicio.component';
@@ -36,6 +40,46 @@ const routes: Routes = [
   {
     path: 'editar-mascota',
     component: EditarMascotaComponent
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    path: 'crear-plan',
+    component: CrearPlanComponent
+  },
+  {
+    path: 'editar-plan/:id',
+    component: EditarPlanComponent
+  },
+  {
+    path: 'listar-plan',
+    component: BuscarPlanComponent
+  },
+  {
+    path: 'eliminar-plan/:id',
+    component: EliminarPlanComponent
   }
 ];
 
