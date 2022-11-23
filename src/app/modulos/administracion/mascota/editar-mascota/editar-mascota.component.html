@@ -1,37 +1,45 @@
-<p>editar-mascota works!</p>
-<table>
-  <thead>
-    <tr>
-        <th>nombre</th>
-        <th>foto</th>
-        <th>estado</th>
-        <th>especie</th>
-        <th>comentario</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Perla</td>
-      <td>Eclair</td>
-      <td>activo</td>
-      <td>pastor aleman</td>
-      <td>perro en buen estado de salud</td>
-    </tr>
-    <tr>
-      <td>Yogui</td>
-      <td>Jellybean</td>
-      <td>activo</td>
-      <td>criollo</td>
-      <td>perro en buen estado de salud</td>
-    </tr>
-    <tr>
-      <td>Lucki</td>
-      <td>Lollipop</td>
-      <td>inactivo</td>
-      <td>criollo</td>
-      <td>perro se encuentra enfermo</td>
-    </tr>
-  </tbody>
-</table>
-      
+<div class="row">
+  <h2 class="center-align">Editar Mascota</h2>
+  <article class="col s6 offset-s3">
+    <form [formGroup]="fgValidador" (ngSubmit) = "EditarMascota()" method="post" action="formulario-contact.php">
+      <input type="hidden" formControlName="id" />
+      <div class="row card panel">
+      <div class="input-field" >
+        <label for="nombre" class="active">Nombre:</label>
+        <input formControlName="nombre" type="text" name="nombre" required>
+      </div>
+      <div class="input-field" >
+        <label for="foto" class="active">Foto:</label>
+        <input formControlName="foto" type="text" name="foto" required>
+      </div>
+        <div  class="col s6 offset-s3" class="container"> 
+            <p><strong>Actualizar Estado</strong></p>
+            <div class="container">
+     <select class="input-field" class="browser-default"  formControlName="estado">
+        <option  value="Pendiente">Pendiente</option>
+        <option  value="Aceptado">Aceptar</option>
+        <option  value="Rechazado">Rechazar</option>
+      </select>
+    </div>
+      <br>
+     </div>
+      <div class="input-field" >
+        <label for="especie" class="active">Especie</label>
+        <input formControlName="especie" type="text" name="especie" required>
+      </div>
+      <div class="input-field" >
+        <label for="comentario" class="active">Comentario</label>
+        <input formControlName="comentario" type="text" name="comentario" required>
+      </div>
+      <p class="center-align">
+        <button [disabled]="!fgValidador.valid" class="waves-effect waves-ligth btn" type="submit"><i 
+          class='material-icons right'>send</i>Actualizar</button>
+        </p>
+      </div>
+    </form>
+    <br>
+    <br>
+  </article>
+  <br>
+  <br>
+</div>  
