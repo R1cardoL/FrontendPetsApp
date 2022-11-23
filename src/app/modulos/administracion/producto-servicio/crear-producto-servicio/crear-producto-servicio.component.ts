@@ -24,7 +24,7 @@ export class CrearProductoServicioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  GardarProductoServicio(){
+  GuardarProductoServicio(){
     let tipo = this.fgValidador.controls["tipo"].value;
     let nombre = this.fgValidador.controls["nombre"].value;
     let descripcion = this.fgValidador.controls["descripcion"].value;

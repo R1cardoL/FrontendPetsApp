@@ -11,6 +11,7 @@ import { SeguridadService } from 'src/app/servicios/seguridad.service';
 export class BarraNavegacionComponent implements OnInit {
 
   seInicioSesion: boolean = false;
+  rol : String = "";
 
   subs: Subscription = new Subscription();
 
@@ -19,6 +20,7 @@ export class BarraNavegacionComponent implements OnInit {
   ngOnInit(): void {
     this.subs = this.seguridadServicio.ObtenerDatosUsuarioEnSesion().subscribe((datos:ModeloIdentificar) => {
       this.seInicioSesion = datos.estaIdentificado;
+      this.rol = String(datos.datos?.rol);
     })
   }
 
