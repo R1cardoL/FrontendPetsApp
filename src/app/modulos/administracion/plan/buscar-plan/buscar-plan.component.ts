@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ModeloPlan } from 'src/app/modelos/plan.modelo';
-import { PlanService } from 'src/app/servicios/plan.service';
 
 @Component({
   selector: 'app-buscar-plan',
@@ -9,20 +7,9 @@ import { PlanService } from 'src/app/servicios/plan.service';
 })
 export class BuscarPlanComponent implements OnInit {
 
-  listadoRegistros: ModeloPlan[] = [];
-
-  constructor(private planservicio: PlanService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.ObtenerListadoPlanes();
-  }
-  
-  
-  ObtenerListadoPlanes(){
-    this.planservicio.ObtenerRegistros().subscribe((datos: ModeloPlan[]) => {
-      this.listadoRegistros = datos;
-    })
-
   }
 
 }

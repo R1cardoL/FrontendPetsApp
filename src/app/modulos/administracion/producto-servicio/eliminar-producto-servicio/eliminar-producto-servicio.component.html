@@ -1,1 +1,35 @@
-<p>eliminar-producto-servicio works!</p>
+
+<div class="row">
+    <h2 id="contacto">Eliminar Productos o Servicios</h2>
+    <article class="col s6 offset-s3">
+     <form [formGroup]="fgValidador" (ngSubmit)="EliminarProductoServicio()" method="delete" action="formulario-contact.php">
+        <input type="hidden" formControlName="id">
+          <div class="row card panel">
+              <div class="input-field" >
+                  <label for="tipo" class="active">Tipo:</label>
+                  <input formControlName="tipo" type="text" name="tipo" required>
+              </div>
+
+              <div class="input-field" >
+                  <label for="nombre" class="active">Nombre:</label>
+                  <input formControlName="nombre" type="text" name="nombre" required>
+              </div>
+
+              <div class="input-field" >
+                  <label for="descripcion" class="active">Descripción:</label>
+                  <input formControlName="descripcion" type="text" name="descripcion" required>
+              </div>
+
+              <div class="input-field" >
+                  <label for="precio" class="active">Precio:</label>
+                  <input formControlName="precio" type="text" name="precio" required>
+              </div>
+
+              <p class="center-align">
+              <button [disabled]="!fgValidador.valid" class="waves-effect waves-ligth red btn" type="submit"><i class='material-icons right'>delete_forever</i>Eliminar</button>
+              </p>
+          </div>
+      </form>
+  </article>
+</div>
+  
