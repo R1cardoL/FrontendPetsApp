@@ -1,16 +1,18 @@
 .fondo{
-  background-image: url(https://cdn.pixabay.com/photo/2021/05/04/07/10/dog-6227918_960_720.jpg);
+  background-image: url(https://images.pexels.com/photos/460797/pexels-photo-460797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: absolute;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  
- }
+  height: 1200px;
+  min-height: 100hv;
+ 
+}
 
 h1{
   text-align: center;
-  color: white;
-  text-decoration: #00bcd4;
+  color: black;
+  text-decoration: double #00bcd4;
   
 }
 
