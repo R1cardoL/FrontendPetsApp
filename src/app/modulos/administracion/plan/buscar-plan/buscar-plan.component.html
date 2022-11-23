@@ -1,1 +1,49 @@
-<p>buscar-plan works!</p>
+<div class="row">
+    <h2 id="contacto">Planes Disponibles</h2>
+      <article class="col s6 offset-s3">
+        <a routerLink="/administracion/crear-plan" class="btn">Nuevo Plan-Servicio</a>
+          <table class="table responsive">
+            <thead>
+              <tr>
+                <th>
+                  Nombre
+                </th>
+                <th>
+                  Descripción
+                </th>
+                <th>
+                  Precio
+                </th>
+                <th>
+                  Editar
+                </th>
+                <th>
+                  Eliminar
+                </th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of listadoRegistros">
+                
+                <td>
+                    {{p.nombre}}
+                </td>
+                <td>
+                    {{p.descripcion}}
+                </td>
+                <td>
+                    {{p.precio}}
+                </td>
+                <td>
+                    <a routerLink="/administracion/editar-plan/{{p.id}}" class="waves-effect waves-ligth  btn">Editar</a>
+                </td>
+                <td>
+                  <a routerLink="/administracion/eliminar-plan/{{p.id}}" class="waves-effect waves-ligth red btn">Eliminar</a>
+              </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+  </div>
+  
