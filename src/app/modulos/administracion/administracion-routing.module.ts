@@ -16,6 +16,14 @@ import { BuscarProductoServicioComponent } from './producto-servicio/buscar-prod
 import { CrearProductoServicioComponent } from './producto-servicio/crear-producto-servicio/crear-producto-servicio.component';
 import { EditarProductoServicioComponent } from './producto-servicio/editar-producto-servicio/editar-producto-servicio.component';
 import { EliminarProductoServicioComponent } from './producto-servicio/eliminar-producto-servicio/eliminar-producto-servicio.component';
+import { BuscarProspectoComponent } from './prospecto/buscar-prospecto/buscar-prospecto.component';
+import { CrearProspectoComponent } from './prospecto/crear-prospecto/crear-prospecto.component';
+import { EditarProspectoComponent } from './prospecto/editar-prospecto/editar-prospecto.component';
+import { EliminarProspectoComponent } from './prospecto/eliminar-prospecto/eliminar-prospecto.component';
+import { BuscarSucursalComponent } from './sucursal/buscar-sucursal/buscar-sucursal.component';
+import { CrearSucursalComponent } from './sucursal/crear-sucursal/crear-sucursal.component';
+import { EditarSucursalComponent } from './sucursal/editar-sucursal/editar-sucursal.component';
+import { EliminarSucursalComponent } from './sucursal/eliminar-sucursal/eliminar-sucursal.component';
 import { BuscarUsuarioComponent } from './usuario/buscar-usuario/buscar-usuario.component';
 import { CrearUsuarioComponent } from './usuario/crear-usuario/crear-usuario.component';
 import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.component';
@@ -101,6 +109,38 @@ const routes: Routes = [
   {
     path: 'eliminar-plan/:id',
     component: EliminarClienteComponent
+  },
+  {
+    path: "listar-prospecto",
+    component: BuscarProspectoComponent
+  },
+  {
+    path: 'crear-prospecto',
+    component: CrearProspectoComponent
+  },
+  {
+    path: 'editar-prospecto/:id',
+    component: EditarProspectoComponent
+  },
+  {
+    path: 'eliminar-prospecto/:id',
+    component: EliminarProspectoComponent
+  },
+  {
+    path: "listar-sucursal",
+    component: BuscarSucursalComponent
+  },
+  {
+    path: 'crear-sucursal',
+    component: CrearSucursalComponent
+  },
+  {
+    path: 'editar-sucursal/:id',
+    component: EditarSucursalComponent
+  },
+  {
+    path: 'eliminar-sucursal/:id',
+    component: EliminarSucursalComponent
   },
 
 
