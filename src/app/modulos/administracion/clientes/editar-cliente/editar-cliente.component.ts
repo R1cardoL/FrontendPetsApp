@@ -1,18 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ModeloUsuario } from 'src/app/modelos/usuario.modelo';
-import { UsuarioService } from 'src/app/servicios/usuario.service';
-
-
+import { ModeloCliente } from 'src/app/modelos/cliente.modelo';
+import { ClienteService } from 'src/app/servicios/cliente.service';
 
 @Component({
-  selector: 'app-editar-usuario',
-  templateUrl: './editar-usuario.component.html',
-  styleUrls: ['./editar-usuario.component.css']
+  selector: 'app-editar-cliente',
+  templateUrl: './editar-cliente.component.html',
+  styleUrls: ['./editar-cliente.component.css']
 })
-export class EditarUsuarioComponent implements OnInit {
-
+export class EditarClienteComponent implements OnInit {
+  
   id:string='';
 
     fgValidador: FormGroup = this.fb.group({
@@ -26,17 +24,17 @@ export class EditarUsuarioComponent implements OnInit {
       'rol': ['',[Validators.required]]
     });
     constructor(private fb:FormBuilder,
-      private servicioUsuario: UsuarioService,
+      private servicioCliente: ClienteService,
       private router: Router,
       private route:ActivatedRoute) { }
   
     ngOnInit(): void {
       this.id= this.route.snapshot.params["id"];
-      this.BuscarUsuario();
+      this.BuscarCliente();
     }
   
-    BuscarUsuario(){
-      this.servicioUsuario.ObtenerRegistroPorId(this.id).subscribe((datos: ModeloUsuario) => {
+    BuscarCliente(){
+      this.servicioCliente.ObtenerRegistroPorId(this.id).subscribe((datos: ModeloCliente) => {
         this.fgValidador.controls["id"].setValue(this.id);
         this.fgValidador.controls["cedula"].setValue(datos.cedula);
         this.fgValidador.controls["nombre"].setValue(datos.nombre);
@@ -48,7 +46,7 @@ export class EditarUsuarioComponent implements OnInit {
       });
     }
   
-    EditarUsuario(){
+    EditarCliente(){
       let cedula = this.fgValidador.controls["cedula"].value;
       let nombre = this.fgValidador.controls["nombre"].value;
       let apellido = this.fgValidador.controls["apellido"].value;
@@ -56,7 +54,7 @@ export class EditarUsuarioComponent implements OnInit {
       let correo = this.fgValidador.controls["correo"].value;
       let contrasena = this.fgValidador.controls["contrasena"].value;
       let rol = this.fgValidador.controls["rol"].value;
-      let p = new ModeloUsuario();
+      let p = new ModeloCliente();
       p.cedula = cedula;
       p.nombre = nombre;
       p.apellido = apellido;
@@ -65,11 +63,11 @@ export class EditarUsuarioComponent implements OnInit {
       p.contrasena = contrasena;
       p.rol = rol;
       p.id=this.id;
-      this.servicioUsuario.ActualizarUsuario(p).subscribe((datos: ModeloUsuario)=>{
-        alert ("Usuario Actualizado correctamente");
-        this.router.navigate(["/administracion/listar-usuario"]);
+      this.servicioCliente.ActualizarCliente(p).subscribe((datos: ModeloCliente)=>{
+        alert ("Cliente Actualizado correctamente");
+        this.router.navigate(["/administracion/listar-cliente"]);
       },(error: any)=>{
-        alert ("Error al actualizar el usuario");
+        alert ("Error al actualizar el cliente");
       })
     }
   

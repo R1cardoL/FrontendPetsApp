@@ -27,8 +27,11 @@ import { EditarProspectoComponent } from './prospecto/editar-prospecto/editar-pr
 import { EliminarProspectoComponent } from './prospecto/eliminar-prospecto/eliminar-prospecto.component';
 import { BuscarProspectoComponent } from './prospecto/buscar-prospecto/buscar-prospecto.component';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ClienteComponent } from './cliente/cliente.component';
 import { PlanComponent } from './plan/plan.component';
+import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
+import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
+import { EliminarClienteComponent } from './clientes/eliminar-cliente/eliminar-cliente.component';
+import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 
 
 @NgModule({
@@ -57,8 +60,11 @@ import { PlanComponent } from './plan/plan.component';
     EditarProspectoComponent,
     EliminarProspectoComponent,
     BuscarProspectoComponent,
-    ClienteComponent,
-    PlanComponent
+    PlanComponent,
+    CrearClienteComponent,
+    EditarClienteComponent,
+    EliminarClienteComponent,
+    BuscarClienteComponent
   ],
   imports: [
     CommonModule,

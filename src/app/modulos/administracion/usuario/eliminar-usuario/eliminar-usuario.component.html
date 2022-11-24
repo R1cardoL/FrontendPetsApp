@@ -1,1 +1,52 @@
 <p>eliminar-usuario works!</p>
+
+
+<div class="row">
+    <h2 class="center-align">Ingrese sus Datos:</h2>
+    <article class="col s6 offset-s3">
+      <form [formGroup]="fgValidador" (ngSubmit)="EliminarUsuario()" method="post" action="formulario-contact.php">
+        <div class="row card panel">
+        <div class="input-field" >
+          <label for="cedula" class="active">Cedula</label>
+          <input formControlName="cedula" type="text" name="cedula" required>
+        </div>
+        <div class="input-field" >
+          <label for="nombre" class="active">Nombre</label>
+          <input formControlName="nombre" type="text" name="nombre" required>
+        </div>
+        <div class="input-field" >
+          <label for="apellido" class="active">Apellido</label>
+          <input formControlName="apellido" type="text" name="apellido" required>
+        </div>
+        <div class="input-field" >
+          <label for="telefono" class="active">Teléfono</label>
+          <input formControlName="telefono" type="text" name="telefono" required>
+        </div>
+        <div class="input-field" >
+          <label for="correo" class="active">Correo</label>
+          <input formControlName="correo" type="text" name="correo" required>
+        </div>
+        <div class="input-field" >
+          <label for="contrasena" class="active">Contraseña</label>
+          <input formControlName="contrasena" type="text" name="contrasena" required>
+        </div>
+        <div  class="col s6 offset-s3" class="container"> 
+            <p><strong>Elija el Rol</strong></p>
+            <div class="container">
+     <select class="input-field" class="browser-default"  formControlName="rol">
+        <option  value="cliente">Cliente</option>
+        <option  value="asesor">Asesor</option>
+        <option  value="admin">Administrador</option>
+      </select>
+    </div>
+    </div>
+      <br>
+        <p class="center-align">
+          <button [disabled]="!fgValidador.valid" class="waves-effect waves-ligth red btn" type="submit"><i 
+            class='material-icons right'>delete_forever</i>Eliminar</button>
+          </p>
+        </div>
+      </form>
+    </article>
+  </div>
+  

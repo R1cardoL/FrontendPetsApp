@@ -1,49 +1,41 @@
-<p>editar-usuario works!</p>
-
+<p>crear-cliente works!</p>
 
 <div class="row">
     <h2 class="center-align">Ingrese sus Datos:</h2>
     <article class="col s6 offset-s3">
-      <form [formGroup]="fgValidador" (ngSubmit) = "EditarUsuario()" method="post" action="formulario-contact.php">
+      <form [formGroup]="fgValidador" (ngSubmit) = "GuardarCliente()" method="post" action="formulario-contact.php">
         <div class="row card panel">
         <div class="input-field" >
-          <label for="cedula" class="active">Cedula</label>
+          <label for="cedula">Cedula</label>
           <input formControlName="cedula" type="text" name="cedula" required>
         </div>
         <div class="input-field" >
-          <label for="nombre" class="active">Nombre</label>
+          <label for="nombre">Nombre</label>
           <input formControlName="nombre" type="text" name="nombre" required>
         </div>
         <div class="input-field" >
-          <label for="apellido" class="active">Apellido</label>
+          <label for="apellido">Apellido</label>
           <input formControlName="apellido" type="text" name="apellido" required>
         </div>
         <div class="input-field" >
-          <label for="telefono" class="active">Teléfono</label>
+          <label for="telefono">Teléfono</label>
           <input formControlName="telefono" type="text" name="telefono" required>
         </div>
         <div class="input-field" >
-          <label for="correo" class="active">Correo</label>
+          <label for="correo">Correo</label>
           <input formControlName="correo" type="text" name="correo" required>
         </div>
         <div class="input-field" >
-          <label for="contrasena" class="active">Contraseña</label>
+          <label for="contrasena">Contraseña</label>
           <input formControlName="contrasena" type="text" name="contrasena" required>
         </div>
-        <div  class="col s6 offset-s3" class="container"> 
-            <p><strong>Elija el Rol</strong></p>
-            <div class="container">
-     <select class="input-field" class="browser-default"  formControlName="rol">
-        <option  value="cliente">Cliente</option>
-        <option  value="asesor">Asesor</option>
-        <option  value="admin">Administrador</option>
-      </select>
-    </div>
-    </div>
-      <br>
+        <div class="input-field">
+          <label for="rol"></label>
+          <input formControlName="rol" type="hidden" value="cliente" name="rol" required >
+        </div>
         <p class="center-align">
           <button [disabled]="!fgValidador.valid" class="waves-effect waves-ligth btn" type="submit"><i 
-            class='material-icons right'>save</i>Guardar</button>
+            class='material-icons right'>send</i>Registrar</button>
           </p>
         </div>
       </form>

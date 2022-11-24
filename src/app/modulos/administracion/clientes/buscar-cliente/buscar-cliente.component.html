@@ -1,9 +1,10 @@
-<p>buscar-usuario works!</p>
+<p>buscar-cliente works!</p>
+
 <div class="row">
-    <h2 id="contacto">Usuarios Registrados</h2>
+    <h2 id="contacto">Clientes Registrados</h2>
     <br>
       <article class="col s6 offset-s3">
-  <a routerLink="/administracion/crear-usuario" class="btn">Nuevo Usuario</a>
+  <a routerLink="/administracion/crear-cliente" class="btn">Nuevo Cliente</a>
   <br>
   <br>
   <table class="tabla responsive" class="centered">
@@ -42,10 +43,10 @@
               {{p.rol}}
           </td>
           <td>
-              <a routerLink="/administracion/editar-usuario/{{p.id}}"class="waves-effect waves-ligth btn">Editar</a>
+              <a routerLink="/administracion/editar-cliente/{{p.id}}"class="waves-effect waves-ligth btn">Editar</a>
           </td>
           <td>
-            <a routerLink="/administracion/eliminar-usuario/{{p.id}}"class="waves-effect waves-ligth red btn">Eliminar</a>
+            <a routerLink="/administracion/eliminar-cliente/{{p.id}}"class="waves-effect waves-ligth red btn">Eliminar</a>
           </td>
       </tr>
     </tbody>
@@ -54,4 +55,3 @@
   </table>
   <br>
   <br>
-
