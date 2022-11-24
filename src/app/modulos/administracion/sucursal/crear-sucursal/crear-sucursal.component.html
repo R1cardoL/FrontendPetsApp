@@ -1,1 +1,32 @@
-<p>crear-sucursal works!</p>
+<div class="row">
+    <h2 class="center-align">Ingrese Sucursales:</h2>
+    <article class="col s6 offset-s3">
+      <form [formGroup]="fgValidador" (ngSubmit) = "GuardarSucursal()" method="post" action="formulario-contact.php">
+        <div class="row card panel">
+        <div class="input-field" >
+          <label for="departamento">Departamento</label>
+          <input formControlName="departamento" type="text" name="departamento" required>
+        </div>
+        <div class="input-field" >
+          <label for="ciudad">Ciudad</label>
+          <input formControlName="ciudad" type="text" name="ciudad" required>
+        </div>
+        <div class="input-field" >
+          <label for="direccion">Direccion</label>
+          <input formControlName="direccion" type="text" name="direccion" required>
+        </div>
+        <div class="input-field" >
+          <label for="telefono">Teléfono</label>
+          <input formControlName="telefono" type="text" name="telefono" required>
+        </div>
+        
+      <br>
+        <p class="center-align">
+          <button [disabled]="!fgValidador.valid" class="waves-effect waves-ligth btn" type="submit"><i 
+            class='material-icons right'>send</i>Registrar</button>
+          </p>
+        </div>
+      </form>
+    </article>
+  </div>
+  

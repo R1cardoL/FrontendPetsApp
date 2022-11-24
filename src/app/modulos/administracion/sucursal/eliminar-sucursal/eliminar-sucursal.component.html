@@ -1,1 +1,35 @@
-<p>eliminar-sucursal works!</p>
+<div class="row">
+    <h2 class="center-align">EliminarSucursal:</h2>
+    <article class="col s6 offset-s3">
+      <form [formGroup]="fgValidador" (ngSubmit) = "EliminarSucursal()" method="post" action="formulario-contact.php">
+        <input type="hidden" formControlName="id" />
+        
+        <div class="row card panel">
+        <div class="input-field" >
+          <label for="departamento" class="active">Departamento</label>
+          <input formControlName="departamento" type="text" name="departamento" required>
+        </div>
+        <div class="input-field" >
+          <label for="ciudad" class="active">Ciudad</label>
+          <input formControlName="ciudad" type="text" name="ciudad" required>
+        </div>
+        <div class="input-field" >
+          <label for="direccion" class="active">Direccion</label>
+          <input formControlName="direccion" type="text" name="direccion" required>
+        </div>
+        <div class="input-field" >
+          <label for="telefono" class="active">Teléfono</label>
+          <input formControlName="telefono" type="text" name="telefono" required>
+        </div>
+        
+      <br>
+        <p class="center-align">
+          <button [disabled]="!fgValidador.valid" class="waves-effect waves-ligth red btn" type="submit"><i 
+            class='material-icons right'>delete_forever</i>Eliminar</button>
+          </p>
+        </div>
+      </form>
+    </article>
+  </div>
+  
+
