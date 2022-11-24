@@ -1,1 +1,54 @@
-<p>buscar-prospecto works!</p>
+<div class="row">
+    <h2 id="contacto">Prospecto Registrados</h2>
+    <br>
+      <article class="col s6 offset-s3">
+  <a routerLink="/administracion/crear-prospecto" class="btn">Nuevo Prospecto</a>
+  <br>
+  <br>
+  <table class="tabla responsive" class="centered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>celular</th>
+        <th>Comentario</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let p of listadoRegistros">
+          <td>
+              {{p.id}}
+          </td>
+          <td>
+              {{p.nombre}}
+          </td>
+          <td>
+              {{p.apellido}}
+          </td>
+          
+          <td>
+              {{p.correo}}
+              
+          </td>
+          <td>
+              {{p.celular}}
+          </td>
+          <td>
+              {{p.comentario}}
+          </td>
+          <td>
+              <a routerLink="/administracion/editar-prospecto/{{p.id}}"class="waves-effect waves-ligth btn">Editar</a>
+          </td>
+          <td>
+            <a routerLink="/administracion/eliminar-prospecto/{{p.id}}"class="waves-effect waves-ligth red btn">Eliminar</a>
+          </td>
+      </tr>
+    </tbody>
+    <br>
+    <br>
+  </table>
+  <br>
+  <br>

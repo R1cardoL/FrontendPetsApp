@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModeloProspecto } from 'src/app/modelos/prospecto.modelo';
+import { ProspectoService } from 'src/app/servicios/prospecto.service';
+
 
 @Component({
   selector: 'app-buscar-prospecto',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarProspectoComponent implements OnInit {
 
-  constructor() { }
+  listadoRegistros:ModeloProspecto[]=[];
+
+  constructor(private prospectoServicio: ProspectoService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoProspecto();
   }
 
+  ObtenerListadoProspecto(){
+    this.prospectoServicio.ObtenerRegistros().subscribe((datos: ModeloProspecto[])=> {
+      this.listadoRegistros=datos;
+    })
+  }
 }
