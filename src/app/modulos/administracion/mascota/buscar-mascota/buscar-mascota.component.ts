@@ -11,7 +11,7 @@ export class BuscarMascotaComponent implements OnInit {
 
   listadoRegistros:ModeloMascota[]=[];
 
-  constructor(private mascotaServicio:MascotaService) { }
+  constructor(private mascotaServicio: MascotaService) { }
 
   ngOnInit(): void {
     this.ObtenerListadoMascotas();

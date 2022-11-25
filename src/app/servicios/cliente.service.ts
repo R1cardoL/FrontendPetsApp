@@ -22,7 +22,7 @@ ObtenerRegistroPorId(id: string): Observable<ModeloCliente>{
 }
 
 CrearCliente(usuario:ModeloCliente):Observable<ModeloCliente>{
-  return this.http.post<ModeloCliente>(`${this.url}/clientes`, usuario ,{
+  return this.http.post<ModeloCliente>(`${this.url}/usuarios`, usuario ,{
     headers: new HttpHeaders({
       'Authorization':`Bearer ${this.token}`
     })

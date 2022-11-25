@@ -95,8 +95,8 @@ const routes: Routes = [
     component: EliminarPlanComponent
   },
   {
-    path: "listar-cliente",
-    component: BuscarClienteComponent
+    path: "crear-cliente",
+    component: CrearClienteComponent
   },
   {
     path: 'crear-plan',

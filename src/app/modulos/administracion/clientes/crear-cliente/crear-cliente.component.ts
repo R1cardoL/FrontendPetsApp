@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModeloCliente } from 'src/app/modelos/cliente.modelo';
+import { ModeloUsuario } from 'src/app/modelos/usuario.modelo';
 import { ClienteService } from 'src/app/servicios/cliente.service';
 
 @Component({
@@ -36,7 +37,7 @@ export class CrearClienteComponent implements OnInit {
     let correo = this.fgValidador.controls["correo"].value;
     let contrasena = this.fgValidador.controls["contrasena"].value;
     let rol = this.fgValidador.controls["rol"].value;
-    let p = new ModeloCliente();
+    let p = new ModeloUsuario();
     p.cedula = cedula;
     p.nombre = nombre;
     p.apellido = apellido;
@@ -44,9 +45,10 @@ export class CrearClienteComponent implements OnInit {
     p.correo = correo;
     p.contrasena = contrasena;
     p.rol = rol;
-    this.servicioCliente.CrearCliente(p).subscribe((datos: ModeloCliente)=>{
+    this.servicioCliente.CrearCliente(p).subscribe((datos: ModeloUsuario)=>{
       alert ("Cliente registrado correctamente");
-      this.router.navigate(["./administracion/listar-cliente"]);
+      alert ("A su correo le enviaremos los datos para iniciar sesión");
+      this.router.navigate(["./inicio"]);
     },(error: any)=>{
       alert ("Error registrando el cliente");
     })
